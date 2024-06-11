@@ -1,0 +1,33 @@
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #81c2f1;
+}
+
+td {
+  background-color: #f2f2f2;
+}
+
+#table {
+  margin-top: 20px;
+}
+
+#table th {
+  padding: 10px;
+}
+
+#table td {
+  padding: 10px;
+}
+
+#table tr:hover {
+  background-color: #07467d;
+}
+
+#table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

@@ -1,0 +1,32 @@
+{% extends "./base.html" %}
+
+{% block title %} Course management {% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-4 offset-md-4">
+        <h2>Course editing</h2>
+        <div class="card">
+            <div class="card-body">
+                <form action="/editCourse/" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" id="txtCode" name="txtCode" value="{{course.code}}" class="form-control" placeholder="Code"
+                            minlength="6" maxlength="6" readonly required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="txtName" name="txtNombre" value="{{course.name}}" class="form-control" placeholder="Name"
+                            maxlength="50" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="numCredits" name="numCredits" value="{{course.credits}}" class="form-control" min="1" max="9"
+                            value="1" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-block text-white">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
